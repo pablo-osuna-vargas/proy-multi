@@ -1,0 +1,15 @@
+-vemos un objeto de un color porque su constitución precisamente rechaza ese color y absorbe todos los demás. Por lo tanto lo vemos de ese color porque lo refleja
+
+-volver sobre la ecuación de mezclas de colores
+
+-nuestro inicipiente sintetizador aditivo RGB por ahora tiene una fundamental para cada color y dos armónicos: un de "sombra" y otro de "brillo"
+
+-definir control de:
+color/canales RGB
+brillo/ armónicos sup
+sombra/ armónicos inf
+saturación/ drive o clip
+textura/ ruido+filtro
+profundidad/ reverb mix + delay mix
+contraste/ ???
+hue(tono)/ ???

@@ -1,0 +1,29 @@
+📝 Bitácora – Objeto Delay
+🎚️ Inlets
+inlet~ (audio) → señal de entrada.
+
+inlet (tiempo) → valor en ms desde slider externo.
+
+inlet (feedback) → valor 0–1 desde slider externo.
+
+🔧 Esquema interno
+Código
+[inlet~] ----------------------\
+                               \
+                                [+~] --> [delwrite~ prof 1000]
+                                 |
+[vd~ prof] <--- [inlet] tiempo --/
+ |
+[*~] <--- [sig~] <--- [inlet] feedback
+ |
+[outlet~]
+📌 Funcionamiento
+La señal de entrada se suma con la señal retardada y se escribe en el búfer (delwrite~).
+
+[vd~ prof] lee el búfer con el tiempo indicado por el slider externo.
+
+La salida retardada se multiplica por el valor de feedback (convertido a señal con [sig~]).
+
+Esa señal vuelve a sumarse con la entrada, generando repeticiones.
+
+El resultado procesado sale por el outlet~ para mezclarse afuera con la señal limpia mediante el slider de mix/depth.

@@ -1,9 +1,9 @@
-#N canvas 1340 106 472 792 12;
-#X obj 2 266 noise~;
-#X obj 111 126 vsl 19 162 1.27 100 1 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
-#X obj 1 416 outlet~;
-#X obj 2 329 *~ 50;
-#X connect 0 0 3 0;
-#X connect 1 0 3 1;
-#X connect 3 0 2 0;
-#X coords 0 0 1 1 40 220 1 100 100;
+#N canvas 4 64 1920 966 12;
+#X obj -56 111 noise~;
+#X obj -57 261 outlet~;
+#X obj -56 174 *~ 100;
+#X obj 129 124 hsl 162 19 1.27 160 0 0 empty empty empty -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 1;
+#X coords 0 0 1 1 220 60 1 100 100;

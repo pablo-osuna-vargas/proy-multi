@@ -11,5 +11,5 @@ sombra/ armónicos inf
 saturación/ drive o clip
 textura/ ruido+filtro
 profundidad/ reverb mix + delay mix
-contraste/ ???
-hue(tono)/ ???
+contraste/ balance e/sombra y brillo
+hue(tono)/ fine tune(?)

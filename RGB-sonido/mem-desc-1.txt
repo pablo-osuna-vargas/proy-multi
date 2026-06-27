@@ -1,59 +1,39 @@
 🎛️ Fuentes principales
+
 Osciladores RGB: tres [osc~] con frecuencias fijas (R=102 Hz, G=124 Hz, B=148 Hz).
-
 Osciladores de sombra y brillo:
-
 Sombra: 2 osciladores dedicados a capas graves/oscurecidas.
-
 Brillo: 2 osciladores dedicados a capas agudas/resaltadas.
-
 Submix RGB: mezcla inicial de los tres canales de color.
-
 Submix armónicos: mezcla de sombra y brillo para enriquecer el timbre.
 
 🔧 Modulación
+
 Ruido: objeto [noise~] usado como modulador de frecuencia en los osciladores RGB.
-
 Introduce variación y textura en el timbre.
-
 Saturación (obj-saturación):
-
 Drive interno → controla intensidad de distorsión.
-
 Procesa la salida del submix RGB.
-
 Implementado con [expr~ tanh($v1)] para saturación suave.
-
 Blend externo: slider que mezcla limpio/saturado.
-
 Rama saturada: salida del saturador × blend.
-
 Rama limpia: salida RGB × (1-blend).
-
 Ambas sumadas en [+~].
 
 🎚️ Mixes y Submixes
+
 Submix RGB → fuente principal.
-
 Submix sombra/brillo → aporta carácter y profundidad.
-
 Mix general:
-
 RGB limpio ↔ saturado (crossfade con blend).
-
 Armónicos sombra/brillo mezclados con su propio nivel.
-
 Todo converge hacia [dac~].
 
 🎯 Objetivo del sintetizador
+
 Traducir color RGB a sonido: cada canal como oscilador base.
-
 Añadir sombra y brillo con osciladores extra para simular capas visuales.
-
 Introducir ruido modulador para dar variación y textura.
-
 Usar saturación suave como control de carácter tímbrico.
-
 Permitir un crossfade limpio ↔ saturado con un slider externo.
-
 Resultado: un timbre visual-sonoro que integra color, sombra, brillo, ruido y saturación en una mezcla final.

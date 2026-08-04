@@ -1,0 +1,12 @@
+#N canvas 224 224 1920 966 12;
+#X obj 477 85 delayL ch3;
+#X obj 477 112 delayR ch4;
+#X obj 213 119 sinte dry ch1;
+#X obj 383 429 dac~;
+#X obj 210 178 env~;
+#X obj 212 212 sigmund~ pitch;
+#X obj 213 246 sigmund~ brillo;
+#X obj 486 177 env~;
+#X obj 488 211 sigmund~ pitch;
+#X obj 489 245 sigmund~ brillo;
+#X text 772 421 ch1: entrada de sinte dry Pd lee: freq \, intensidad \, duración y brillo ch3/4 entradas de returnFX delay Pd lee: idem 1 ZOOM h6 x USB envía toda el MIX de audio a Laptop (lectura y mapeo de audio a datos) envío de datos OSC a P5/Processing (visuales) LINE OUT a mixer Mackie (monitor de audio);
